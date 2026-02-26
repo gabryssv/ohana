@@ -1,12 +1,15 @@
 import { Construction } from "lucide-react";
 import DarkVeil from "@/components/DarkVeil";
 import ShinyText from "@/components/ShinyText";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      <LoadingScreen />
+      
       {/* Background */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <DarkVeil
           hueShift={240}
           noiseIntensity={0.08}
@@ -22,7 +25,7 @@ export default function Home() {
         {/* Logo / Name */}
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Ohana
+            ohana
           </h1>
           <p className="mt-2 text-muted-foreground text-lg tracking-widest uppercase">
             Kooperatywa Edukacyjna
